@@ -2,26 +2,21 @@ import os
 import glob
 import torch
 import time
-import random
 
 import numpy as np
 from tqdm import tqdm
-from torchvision import transforms
 from PIL import Image
-from sklearn.preprocessing import StandardScaler
+
+from torchvision import transforms
 from torch.autograd import Variable
-from sklearn.decomposition import PCA, IncrementalPCA
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
 from decord import VideoReader
 from decord import cpu
 
-from model.alexnet import alexnet
-
-SEED = 42
-torch.manual_seed(SEED)
-torch.cuda.manual_seed(SEED)
-torch.cuda.manual_seed_all(SEED)
-np.random.seed(SEED)
-random.seed(SEED)
+from src.model.alexnet import alexnet
 
 
 def load_alexnet(model_checkpoints):
