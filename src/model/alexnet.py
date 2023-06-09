@@ -54,8 +54,8 @@ class AlexNet(nn.Module):
         out5 = self.conv5(out4)
 
         out6 = self.fc6(out5.view(out5.size(0), 256 * 6 * 6))
-        out7 = self.fc7(x)
-        out8 = self.fc8(x)
+        out7 = self.fc7(out6)
+        out8 = self.fc8(out7)
 
         return out1, out2, out3, out4, out5, out6, out7, out8
 

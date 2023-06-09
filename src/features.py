@@ -19,6 +19,9 @@ from decord import cpu
 from src.model.alexnet import alexnet
 
 
+SEED = 42
+
+
 def load_alexnet(model_checkpoints):
     model = alexnet()
     model_file = model_checkpoints
