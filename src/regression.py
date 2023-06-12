@@ -21,9 +21,9 @@ def vectorized_correlation(x, y):
 
 
 class OLS_pytorch(object):
-    def __init__(self, use_gpu=False):
+    def __init__(self):
         self.coefficients = []
-        self.use_gpu = use_gpu
+        self.use_gpu = torch.cuda.is_available()
         self.X = None
         self.y = None
 
