@@ -90,17 +90,6 @@ def perform_encoding_val(
     )
 
     score = vectorized_correlation(fmri_test, pred_fmri)
-    print("----------------------------------------------------------------------------")
-    print(
-        "Mean correlation for ROI : ",
-        ROI,
-        "in ",
-        sub,
-        " using ",
-        layer,
-        " is :",
-        round(score.mean(), 6),
-    )
     np.save(pred_fmri_save_path, pred_fmri)
 
     # Result visualization
@@ -110,9 +99,9 @@ def perform_encoding_val(
         brain_mask = "./example.nii"
         nii_save_path = os.path.join(results_dir, ROI + "_val.nii")
         nii_img = saveasnii(brain_mask, nii_save_path, visual_mask_3D)
-        return nii_img
+        return score, nii_img
     else:
-        return
+        return score
 
 
 def perform_encoding_test(
