@@ -59,7 +59,7 @@ def visualize_activity(vid_id, sub):
     )
 
 
-def visualize_interactive(nii_img, sub, hemisphere, renderer="notebook"):
+def visualize_interactive(nii_img, sub, hemisphere, renderer="notebook", save_path="./"):
     fsaverage = datasets.fetch_surf_fsaverage("fsaverage")
     texture = surface.vol_to_surf(nii_img, fsaverage["pial_" + hemisphere])
     curv = surface.load_surf_data(fsaverage["curv_" + hemisphere])
@@ -74,4 +74,7 @@ def visualize_interactive(nii_img, sub, hemisphere, renderer="notebook"):
         bg_map=curv_sign,
         engine="plotly",
     )
-    view.show(renderer=renderer)
+    if renderer == "save_html":
+        view.figure.write_html(save_path)
+    else:
+        view.show(renderer=renderer)
