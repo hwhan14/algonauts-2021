@@ -3,7 +3,10 @@ import pickle
 
 import numpy as np
 import nibabel as nib
+import plotly.graph_objects as go
 from nilearn import plotting
+from nilearn import datasets
+from nilearn import surface
 
 
 def save_dict(dict, filename):
@@ -24,6 +27,7 @@ def saveasnii(brain_mask, nii_save_path, nii_data):
     print(img.shape)
     nii_img = nib.Nifti1Image(nii_data, img.affine, img.header)
     nib.save(nii_img, nii_save_path)
+    return nii_img
 
 
 def get_fmri(fmri_dir, ROI):
@@ -53,3 +57,21 @@ def visualize_activity(vid_id, sub):
     plotting.plot_glass_brain(
         nii_save_path, title="fMRI response", plot_abs=False, display_mode="lyr", colorbar=True
     )
+
+
+def visualize_interactive(nii_img, sub, hemisphere, renderer="notebook"):
+    fsaverage = datasets.fetch_surf_fsaverage("fsaverage")
+    texture = surface.vol_to_surf(nii_img, fsaverage["pial_" + hemisphere])
+    curv = surface.load_surf_data(fsaverage["curv_" + hemisphere])
+    curv_sign = np.sign(curv)
+    view = plotting.plot_surf_stat_map(
+        fsaverage["infl_" + hemisphere],
+        texture,
+        hemi=hemisphere,
+        cmap="cold_hot",
+        colorbar=True,
+        title=f"{hemisphere.capitalize()} hemisphere, {sub.capitalize()}",
+        bg_map=curv_sign,
+        engine="plotly",
+    )
+    view.show(renderer=renderer)
