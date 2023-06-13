@@ -21,13 +21,13 @@ Modified parts from the baseline code are as follows.
 
 Interactive 3D surface plots are available for both left and right hemispheres of all 10 subjects.
 
-- Sub01: [lh](plots/sub01_left.html), [rh](plots/sub01_right.html)
-- Sub02: [lh](plots/sub02_left.html), [rh](plots/sub02_right.html)
-- Sub03: [lh](plots/sub03_left.html), [rh](plots/sub03_right.html)
-- Sub04: [lh](plots/sub04_left.html), [rh](plots/sub04_right.html)
-- Sub05: [lh](plots/sub05_left.html), [rh](plots/sub05_right.html)
-- Sub06: [lh](plots/sub06_left.html), [rh](plots/sub06_right.html)
-- Sub07: [lh](plots/sub07_left.html), [rh](plots/sub07_right.html)
-- Sub08: [lh](plots/sub08_left.html), [rh](plots/sub08_right.html)
-- Sub09: [lh](plots/sub09_left.html), [rh](plots/sub09_right.html)
-- Sub10: [lh](plots/sub10_left.html), [rh](plots/sub10_right.html)
+- Sub01: [lh](https://hwhan14.github.io/algonauts-2021/sub01_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub01_right.html)
+- Sub02: [lh](https://hwhan14.github.io/algonauts-2021/sub02_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub02_right.html)
+- Sub03: [lh](https://hwhan14.github.io/algonauts-2021/sub03_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub03_right.html)
+- Sub04: [lh](https://hwhan14.github.io/algonauts-2021/sub04_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub04_right.html)
+- Sub05: [lh](https://hwhan14.github.io/algonauts-2021/sub05_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub05_right.html)
+- Sub06: [lh](https://hwhan14.github.io/algonauts-2021/sub06_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub06_right.html)
+- Sub07: [lh](https://hwhan14.github.io/algonauts-2021/sub07_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub07_right.html)
+- Sub08: [lh](https://hwhan14.github.io/algonauts-2021/sub08_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub08_right.html)
+- Sub09: [lh](https://hwhan14.github.io/algonauts-2021/sub09_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub09_right.html)
+- Sub10: [lh](https://hwhan14.github.io/algonauts-2021/sub10_left.html), [rh](https://hwhan14.github.io/algonauts-2021/sub10_right.html)
